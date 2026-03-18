@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --bg-main: #1f2937;
   --bg-card: #24283b;
+  --header-padding: 2rem;
 }
 
 .container {
@@ -69,6 +70,23 @@ h1, h2, h3, h4, h5, h6 {
 .header-name {
   grid-column: 1 / 2;
   grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: var(--header-padding);
+  padding-bottom: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  object-fit: cover;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
 
 .header-user {
@@ -88,6 +106,43 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding-left: var(--header-padding);
   padding: 2rem;
 }
 
+input {
+  border: 1px solid #d1d1d1;
+  border-radius: 15px;
+  background-color: #e2e8f0;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  outline: 0px solid transparent;
+  transition: outline 0.2s ease, border-color 0.2s ease;
+  outline-offset: 0;
+  padding: 1px 10px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4a93f2;
+  box-shadow: 2px 4px 8px -1px hsla(213, 10%, 21%, 0.25);
+}
+
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.logo-link,
+.nav-link {
+  color: black;
+  text-decoration: none;
+  transition: ease-in-out 0.2s;
+}
+
+li {
+  list-style: none;
+}
